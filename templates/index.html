@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Texas Hold'em Poker Probability</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Texas Hold'em Poker Probability Calculator</h1>
+        <form id="pokerForm" method="post">
+            <label for="hand">Your Hand (e.g., Ah Kh):</label>
+            <input type="text" id="hand" name="hand" required>
+            
+            <label for="num_players">Number of Players at the Table:</label>
+            <input type="number" id="num_players" name="num_players" min="2" max="10" required>
+            
+            <button type="submit">Calculate Probability</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
